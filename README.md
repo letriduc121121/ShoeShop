@@ -1,10 +1,10 @@
 <div align="center">
 
-# 👟 ShoeVerse
+# 👟 ShoeVerse - Nền Tảng Bán Giày Trực Tuyến
 
-### *Nơi Mỗi Bước Chân Kể Một Câu Chuyện*
+### *Kết Hợp Thương Mại Điện Tử & Chat Thời Gian Thực*
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=EF4444&center=true&vCenter=true&width=600&lines=Nền+Tảng+Thương+Mại+Xã+Hội+Bán+Giày;Chat+%26+Thông+Báo+Thời+Gian+Thực;Tích+Hợp+Thanh+Toán+Bảo+Mật;Xây+Dựng+Với+Spring+Boot+%26+React" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=EF4444&center=true&vCenter=true&width=600&lines=Nền+Tảng+Bán+Giày+Full-Stack;Chat+Thời+Gian+Thực+WebSocket;Xác+Thực+JWT+Bảo+Mật;Spring+Boot+%26+React" alt="Typing SVG" />
 
 ---
 
@@ -20,74 +20,164 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 
-[🎬 Demo Trực Tiếp](https://shoeverse-demo.com) • [📖 Tài Liệu](https://docs.shoeverse.com) • [🐛 Báo Lỗi](https://github.com/yourusername/shoeverse/issues) • [✨ Yêu Cầu Tính Năng](https://github.com/yourusername/shoeverse/issues)
-
 </div>
 
 ---
 
-## 🌟 Tổng Quan
+## 🌟 Giới Thiệu
 
-**ShoeVerse** là một **nền tảng thương mại xã hội full-stack** tiên tiến, cách mạng hóa việc mua sắm giày trực tuyến bằng cách kết hợp chức năng thương mại điện tử liền mạch với tương tác xã hội thời gian thực và tích hợp thanh toán bảo mật. Được xây dựng với kiến trúc cấp doanh nghiệp và công nghệ hiện đại, nền tảng mang lại hiệu suất, khả năng mở rộng và trải nghiệm người dùng vượt trội.
+**ShoeVerse** là nền tảng thương mại điện tử bán giày được xây dựng với kiến trúc full-stack hiện đại. Dự án kết hợp chức năng mua sắm trực tuyến với tính năng chat thời gian thực, mang đến trải nghiệm mua sắm tương tác và tiện lợi.
 
-> 💡 **Hoàn hảo cho**: Doanh nghiệp thương mại điện tử, startup, dự án portfolio, và học tập phát triển full-stack nâng cao
-
----
-
-## ✨ Tính Năng Chính
-
-<table>
-<tr>
-<td width="50%">
-
-### 🛍️ Lõi Thương Mại Điện Tử
-- 📦 **Danh Mục Sản Phẩm** với bộ lọc theo danh mục, màu sắc, kích cỡ
-- 🛒 **Giỏ Hàng** với quản lý sản phẩm
-- 📊 **Quản Lý Đơn Hàng** theo trạng thái
-- � **Quản Lý Tài Khoản** cá nhân và địa chỉ
-- 🔐 **Xác Thực & Phân Quyền** (User/Admin)
-
-</td>
-<td width="50%">
-
-### 💬 Tính Năng Xã Hội
-- ⭐ **Hệ Thống Đánh Giá & Bình Luận** sản phẩm
-- 💬 **Chat Thời Gian Thực** (WebSocket)
-- � **Đăng Bài & Tương Tác** trên mạng xã hội
-- 👥 **Theo Dõi & Kết Bạn**
-- 🖼️ **Chia Sẻ Hình Ảnh**
-
-</td>
-</tr>
-</table>
+### 🎯 Mục Đích Dự Án
+- Học tập và thực hành phát triển ứng dụng full-stack
+- Áp dụng kiến trúc 3 lớp (Controller-Service-Repository)
+- Triển khai xác thực JWT với HttpOnly Cookies
+- Tích hợp WebSocket cho chat thời gian thực
 
 ---
 
-## 🎯 Điểm Nổi Bật
+## ✨ Tính Năng Đã Triển Khai
+
+### 🔐 Xác Thực & Phân Quyền
+- ✅ Đăng ký và đăng nhập người dùng
+- ✅ JWT Authentication với HttpOnly Cookies
+- ✅ Phân quyền ADMIN/USER
+- ✅ Protected Routes trên frontend
+
+### 🛍️ Quản Lý Sản Phẩm
+- ✅ Xem danh sách sản phẩm
+- ✅ Xem chi tiết sản phẩm
+- ✅ Tìm kiếm sản phẩm theo từ khóa
+- ✅ Lọc sản phẩm theo danh mục
+- ✅ CRUD sản phẩm (chỉ Admin)
+
+### 🛒 Giỏ Hàng
+- ✅ Thêm sản phẩm vào giỏ hàng
+- ✅ Cập nhật số lượng sản phẩm
+- ✅ Xóa sản phẩm khỏi giỏ hàng
+- ✅ Xóa toàn bộ giỏ hàng
+- ✅ Tính tổng tiền tự động
+
+### 📦 Quản Lý Đơn Hàng
+- ✅ Tạo đơn hàng từ giỏ hàng
+- ✅ Xem lịch sử đơn hàng
+- ✅ Xem chi tiết đơn hàng
+- ✅ Cập nhật trạng thái đơn hàng (Admin)
+- ✅ Hỗ trợ thanh toán COD và QR Code
+- ✅ Theo dõi trạng thái: PENDING → PROCESSING → SHIPPING → DELIVERED
+
+### 💬 Chat Thời Gian Thực
+- ✅ Chat 1-1 giữa người dùng
+- ✅ WebSocket (STOMP) cho real-time messaging
+- ✅ Lịch sử tin nhắn
+- ✅ Trạng thái đã đọc/chưa đọc
+
+### 👨‍💼 Admin Dashboard
+- ✅ Quản lý sản phẩm (thêm, sửa, xóa)
+- ✅ Quản lý đơn hàng
+- ✅ Cập nhật trạng thái đơn hàng
+
+---
+
+## �️ Kiến Trúc Hệ Thống
 
 ```mermaid
-graph LR
-    A[🌐 Client] --> B[🔐 Spring Security + JWT]
-    B --> C[⚡ REST API Layer]
-    C --> D[💼 Service Layer]
-    D --> E[🗄️ MySQL]
-    C --> F[ WebSocket]
-    F --> G[💬 Real-time Chat]
+graph TB
+    subgraph Frontend
+        A[React 19 + Vite]
+        B[React Query]
+        C[Zustand Store]
+        D[TailwindCSS]
+    end
+    
+    subgraph Backend
+        E[Spring Boot 4.0.1]
+        F[Spring Security + JWT]
+        G[WebSocket STOMP]
+        H[JPA/Hibernate]
+    end
+    
+    subgraph Database
+        I[(MySQL 8.0)]
+    end
+    
+    A --> E
+    B --> E
+    A --> G
+    E --> F
+    E --> H
+    H --> I
 ```
 
-<div align="center">
+### Backend Architecture (3-Layer)
 
-| Tính Năng | Công Nghệ | Trạng Thái |
-|---------|-----------|-----------|
-| 🔐 **Xác Thực** | JWT + Spring Security | ✅ Hoạt Động |
-| 💬 **Chat Thời Gian Thực** | WebSocket (STOMP) | ✅ Hoạt Động |
-| � **Mạng Xã Hội** | Posts, Comments, Likes | ✅ Hoạt Động |
-| �️ **Database** | MySQL 8.0 | ✅ Hoạt Động |
-
-</div>
+```
+Controller Layer (REST API)
+    ↓
+Service Layer (Business Logic)
+    ↓
+Repository Layer (Data Access)
+    ↓
+Database (MySQL)
+```
 
 ---
-## 🚀 Bắt Đầu Nhanh
+
+## 🔧 Chi Tiết Công Nghệ
+
+### Backend 🎯
+
+| Thành Phần | Công Nghệ | Mô Tả |
+|-----------|-----------|-------|
+| **Framework** | Spring Boot 4.0.1 | Framework chính |
+| **Ngôn Ngữ** | Java 21 | JDK version |
+| **Bảo Mật** | Spring Security + JWT | Xác thực & phân quyền |
+| **Database** | MySQL 8.0 | Cơ sở dữ liệu quan hệ |
+| **ORM** | Spring Data JPA + Hibernate | Object-Relational Mapping |
+| **Real-time** | WebSocket (STOMP) | Chat thời gian thực |
+| **Build Tool** | Maven | Quản lý dependencies |
+
+**Entities:**
+- `User` - Thông tin người dùng (username, email, role)
+- `Product` - Sản phẩm (name, price, category, size, stock)
+- `CartItem` - Sản phẩm trong giỏ hàng
+- `Order` - Đơn hàng (totalAmount, status, paymentMethod)
+- `OrderItem` - Chi tiết sản phẩm trong đơn hàng
+- `ChatMessage` - Tin nhắn chat
+
+**API Endpoints:**
+- `/api/auth/*` - Đăng ký, đăng nhập, đăng xuất
+- `/api/products/*` - CRUD sản phẩm, tìm kiếm, lọc
+- `/api/cart/*` - Quản lý giỏ hàng
+- `/api/orders/*` - Tạo và quản lý đơn hàng
+- `/api/chat/*` - Lấy lịch sử chat
+- `/ws/*` - WebSocket endpoint cho chat
+
+### Frontend 🎨
+
+| Thành Phần | Công Nghệ | Mô Tả |
+|-----------|-----------|-------|
+| **Framework** | React 19 | UI framework |
+| **Build Tool** | Vite 7.x | Fast build tool |
+| **Styling** | TailwindCSS 3.x | Utility-first CSS |
+| **State Management** | Zustand | Client state (auth) |
+| **Server State** | React Query (TanStack) | API data caching |
+| **Routing** | React Router v7 | Client-side routing |
+| **HTTP Client** | Axios | API requests |
+| **Icons** | Lucide React | Icon library |
+
+**Pages:**
+- `Home` - Trang chủ
+- `Products` - Danh sách sản phẩm
+- `ProductDetail` - Chi tiết sản phẩm
+- `Cart` - Giỏ hàng
+- `Orders` - Lịch sử đơn hàng
+- `Chat` - Chat thời gian thực
+- `Admin/Dashboard` - Quản trị viên
+
+---
+
+## 🚀 Hướng Dẫn Cài Đặt
 
 ### Yêu Cầu Hệ Thống
 
@@ -98,30 +188,36 @@ MySQL 8.0+
 Maven 3.x
 ```
 
-### 💻 Cài Đặt Thủ Công
+### 1️⃣ Clone Repository
 
+```bash
 git clone https://github.com/Vivuatroidanh/Social-Commerce-Platform.git
+cd Social-Commerce-Platform
+```
 
-<details>
-<summary><b>Nhấp để xem các bước cài đặt thủ công</b></summary>
-
-#### Cài Đặt Backend
+### 2️⃣ Cài Đặt Backend
 
 ```bash
 cd shoe-shop
 
-# Cấu hình database (application.yml)
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/Bitis
-    username: tên_người_dùng_của_bạn
-    password: mật_khẩu_của_bạn
+# Tạo database MySQL
+mysql -u root -p
+CREATE DATABASE Bitis;
+exit;
+
+# Cấu hình database trong application.properties
+# File: src/main/resources/application.properties
+spring.datasource.url=jdbc:mysql://localhost:3306/Bitis
+spring.datasource.username=root
+spring.datasource.password=your_password
 
 # Chạy ứng dụng
 ./mvnw spring-boot:run
 ```
 
-#### Cài Đặt Frontend
+Backend sẽ chạy tại: `http://localhost:8080`
+
+### 3️⃣ Cài Đặt Frontend
 
 ```bash
 cd bitis-frontend
@@ -129,115 +225,82 @@ cd bitis-frontend
 # Cài đặt dependencies
 npm install
 
-# Cấu hình API endpoint (.env)
-VITE_API_URL=http://localhost:5173
-
-# Khởi động development server
+# Chạy development server
 npm run dev
 ```
 
-</details>
+Frontend sẽ chạy tại: `http://localhost:5173`
 
 ---
 
-## 🔧 Chi Tiết Công Nghệ
+## � Database Schema
 
-### Backend 🎯
+### Bảng Chính
 
-```yaml
-Framework:       Spring Boot 4.0.1
-Ngôn Ngữ:        Java 21
-Bảo Mật:         Spring Security + JWT
-Database:        MySQL 8.0
-Thời Gian Thực:  WebSocket (STOMP)
-Testing:         JUnit 5
-Build Tool:      Maven
-```
+**users**
+- id, username, password, full_name, email, phone, address, role, created_at, updated_at
 
-### Frontend 🎨
+**products**
+- id, name, description, price, image_url, category, size, stock, created_at, updated_at
 
-```yaml
-Framework:       React 19
-Build Tool:      Vite 7.x
-Styling:         TailwindCSS 3.x
-Quản Lý State:   Zustand + React Query
-UI Components:   Lucide Icons
-HTTP Client:     Axios
-Routing:         React Router v7
-```
+**cart_items**
+- id, user_id, product_id, quantity, created_at
 
-### DevOps 🐳
+**orders**
+- id, user_id, total_amount, payment_method, payment_status, delivery_address, delivery_phone, status, notes, created_at, updated_at
 
-```yaml
-Quản Lý Phiên Bản: Git + GitHub
-License:         MIT
-```
+**order_items**
+- id, order_id, product_id, quantity, price
+
+**chat_messages**
+- id, sender_id, receiver_id, message, is_read, created_at
 
 ---
 
-## 🔐 Tính Năng Bảo Mật
+## 🔐 Bảo Mật
 
-- ✅ **Xác Thực JWT** với xoay vòng refresh token
-- ✅ **HTTPS** sẵn sàng với hỗ trợ SSL/TLS
-- ✅ **CORS** được cấu hình cho cross-origin requests
-- ✅ **Phòng Chống SQL Injection** thông qua JPA
-- ✅ **Bảo Vệ XSS** với HttpOnly cookies
-- ✅ **Bảo Vệ CSRF** với SameSite cookies
-- ✅ **Giới Hạn Tốc Độ** trên các endpoint xác thực
-- ✅ **Kiểm Soát Truy Cập Dựa Trên Vai Trò** (RBAC)
+- ✅ **JWT Authentication** với HttpOnly Cookies (chống XSS)
+- ✅ **Password Encryption** với BCrypt
+- ✅ **CORS Configuration** cho cross-origin requests
+- ✅ **Role-Based Access Control** (ADMIN/USER)
+- ✅ **SQL Injection Prevention** thông qua JPA
+- ✅ **CSRF Protection** với SameSite cookies
 
 ---
 
-## 📊 Kiến Trúc & Tối Ưu
+## �️ Lộ Trình Phát Triển
 
-| Tính Năng | Triển Khai |
-|-------------|----------------|
-| **Kiến Trúc Backend** | 3-Layer Architecture (Controller-Service-Repository) |
-| **ORM** | Spring Data JPA với Hibernate |
-| **API Design** | RESTful API |
-| **State Management** | React Query cho server state, Zustand cho client state |
-| **Routing** | React Router với lazy loading |
+### Đang Phát Triển 🚧
+- [ ] Upload hình ảnh sản phẩm
+- [ ] Đánh giá và bình luận sản phẩm
+- [ ] Thông báo real-time
 
----
-
-**Tính Năng Đã Triển Khai:**
-- ✅ Xác thực JWT với HttpOnly Cookies
-- ✅ Quản lý sản phẩm (CRUD)
-- ✅ Giỏ hàng và đơn hàng
-- ✅ Hệ thống mạng xã hội (posts, comments, likes)
-- ✅ Chat thời gian thực
+### Kế Hoạch Tương Lai 📋
+- [ ] Tích hợp cổng thanh toán (VNPay, MoMo)
+- [ ] Hệ thống voucher và khuyến mãi
+- [ ] Theo dõi vận chuyển
+- [ ] Dashboard analytics cho Admin
+- [ ] Email notifications
+- [ ] Docker containerization
+- [ ] Progressive Web App (PWA)
 
 ---
 
 ## 🤝 Đóng Góp
 
-Đóng góp là điều làm cho cộng đồng mã nguồn mở trở nên tuyệt vời! Mọi đóng góp của bạn đều được **đánh giá cao**.
+Mọi đóng góp đều được chào đón! Vui lòng:
 
-1. Fork Dự Án
-2. Tạo Feature Branch của bạn (`git checkout -b feature/TinhNangTuyetVoi`)
-3. Commit Thay Đổi của bạn (`git commit -m 'Thêm TinhNangTuyetVoi'`)
-4. Push lên Branch (`git push origin feature/TinhNangTuyetVoi`)
-5. Mở Pull Request
-
----
-
-## 🗺️ Lộ Trình Phát Triển
-
-- [ ] � Tích Hợp Cổng Thanh Toán (VNPay, MoMo)
-- [ ] 📦 Hệ Thống Theo Dõi Vận Chuyển
-- [ ] 🎁 Flash Sale & Voucher
-- [ ] 📊 Dashboard Quản Trị Nâng Cao
-- [ ] 🔔 Thông Báo Push Notifications
-- [ ] 📧 Email Marketing
-- [ ] 🐳 Docker Containerization
-- [ ] � Progressive Web App (PWA)
-- [ ] 🤖 AI Gợi Ý Sản Phẩm
+1. Fork dự án
+2. Tạo feature branch (`git checkout -b feature/TinhNangMoi`)
+3. Commit thay đổi (`git commit -m 'Thêm tính năng mới'`)
+4. Push lên branch (`git push origin feature/TinhNangMoi`)
+5. Tạo Pull Request
 
 ---
 
-## 📄 Giấy Phép
+## � License
 
-Phân phối theo Giấy phép MIT. Xem `LICENSE` để biết thêm thông tin.
+Dự án được phân phối theo giấy phép MIT. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
 
 ---
 
@@ -250,22 +313,16 @@ Phân phối theo Giấy phép MIT. Xem `LICENSE` để biết thêm thông tin.
 
 ---
 
-## ⭐ Ủng Hộ Dự Án
+## 🙏 Lời Cảm Ơn
 
-Cho một ⭐️ nếu dự án này giúp ích cho bạn!
+Dự án được xây dựng với mục đích học tập và thực hành. Cảm ơn cộng đồng open-source đã cung cấp các công cụ tuyệt vời!
 
 ---
 
 <div align="center">
 
-### 🙏 Lời Cảm Ơn
+**[⬆ Về Đầu Trang](#-shoeverse---nền-tảng-bán-giày-trực-tuyến)**
 
-Được xây dựng với ❤️ sử dụng **Spring Boot** & **React**
-
-Cảm ơn đặc biệt đến cộng đồng mã nguồn mở tuyệt vời
-
----
-
-**[↑ Về Đầu Trang](#-shoeverse)**
+Made with ❤️ using Spring Boot & React
 
 </div>
