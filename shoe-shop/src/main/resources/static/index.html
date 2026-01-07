@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biti's Hunter - Giày Thể Thao Việt Nam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-brand">
+            <svg class="logo-icon" viewBox="0 0 40 40" fill="none">
+                <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 15L28 19.5V28.5L20 33L12 28.5V19.5L20 15Z" fill="currentColor"/>
+            </svg>
+            <span class="logo-text">BITI'S HUNTER</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-page="home">TRANG CHỦ</a>
+            <a href="#" class="nav-link" data-page="products">SẢN PHẨM</a>
+            <a href="#" class="nav-link" data-page="cart">GIỎ HÀNG <span class="cart-badge" id="cartBadge">0</span></a>
+            <a href="#" class="nav-link" data-page="orders">ĐƠN HÀNG</a>
+            <a href="#" class="nav-link" data-page="chat">CHAT</a>
+            <a href="#" class="nav-link admin-only" data-page="admin" style="display:none; color: var(--primary)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:4px">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                ADMIN
+            </a>
+        </div>
+
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="M21 21l-4.35-4.35"/>
+                </svg>
+            </div>
+            <button class="btn-icon" id="userBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+            </button>
+            <button class="btn-icon mobile-menu-btn" id="mobileMenuBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Pages Container -->
+<main id="pageContainer">
+    <!-- Home Page -->
+    <section id="homePage" class="page active">
+        <div class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">ĐI</span>
+                        <span class="title-line">CHUYỂN</span>
+                        <span class="title-line">VIỆT NAM</span>
+                    </h1>
+                    <p class="hero-subtitle">Giày thể thao được thiết kế dành riêng cho người Việt</p>
+                    <button class="btn-primary" onclick="navigateTo('products')">
+                        KHÁM PHÁ NGAY
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container section">
+            <div class="section-header">
+                <h2 class="section-title">SẢN PHẨM NỔI BẬT</h2>
+                <button class="btn-text" onclick="navigateTo('products')">Xem tất cả →</button>
+            </div>
+            <div class="product-grid" id="featuredProducts">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+
+        <div class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h3>BẢO HÀNH 6 THÁNG</h3>
+                        <p>Cam kết chất lượng sản phẩm</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13"/>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <h3>GIAO HÀNG NHANH</h3>
+                        <p>Miễn phí giao hàng toàn quốc</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <h3>ĐỔI TRẢ DỄ DÀNG</h3>
+                        <p>Đổi trả trong 7 ngày</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Page -->
+    <section id="productsPage" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">SẢN PHẨM</h1>
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-category="ALL">TẤT CẢ</button>
+                    <button class="filter-btn" data-category="NAM">NAM</button>
+                    <button class="filter-btn" data-category="NỮ">NỮ</button>
+                    <button class="filter-btn" data-category="UNISEX">UNISEX</button>
+                </div>
+            </div>
+            <div class="product-grid" id="allProducts">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Page -->
+    <section id="cartPage" class="page">
+        <div class="container">
+            <h1 class="page-title">GIỎ HÀNG</h1>
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="cart-summary">
+                    <h3>TỔNG CỘNG</h3>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="subtotal">0₫</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span>Miễn phí</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total">
+                        <span>Tổng cộng:</span>
+                        <span id="totalAmount">0₫</span>
+                    </div>
+                    <button class="btn-primary btn-full" id="checkoutBtn">THANH TOÁN</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orders Page -->
+    <section id="ordersPage" class="page">
+        <div class="container">
+            <h1 class="page-title">ĐƠN HÀNG CỦA TÔI</h1>
+            <div class="orders-list" id="ordersList">
+                <!-- Orders will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Page -->
+    <section id="chatPage" class="page">
+        <div class="container">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>HỖ TRỢ KHÁCH HÀNG</h2>
+                    <span class="online-status">● Online</span>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Messages will be loaded here -->
+                </div>
+                <div class="chat-input-container">
+                    <input type="text" id="chatInput" placeholder="Nhập tin nhắn...">
+                    <button class="btn-icon" id="sendMessageBtn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Page -->
+    <section id="adminPage" class="page">
+        <div class="container">
+            <h1 class="page-title">QUẢN TRỊ ADMIN</h1>
+
+            <!-- Admin Tabs -->
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="products">QUẢN LÝ SẢN PHẨM</button>
+                <button class="admin-tab" data-tab="orders">QUẢN LÝ ĐƠN HÀNG</button>
+                <button class="admin-tab" data-tab="stats">THỐNG KÊ</button>
+            </div>
+
+            <!-- Admin Products Tab -->
+            <div id="adminProductsTab" class="admin-tab-content active">
+                <div class="admin-header">
+                    <h2>Danh sách sản phẩm</h2>
+                    <button class="btn-primary" onclick="openAddProductModal()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        THÊM SẢN PHẨM
+                    </button>
+                </div>
+                <div class="admin-table-container">
+                    <table class="admin-table" id="adminProductsTable">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Danh mục</th>
+                            <th>Giá</th>
+                            <th>Size</th>
+                            <th>Tồn kho</th>
+                            <th>Thao tác</th>
+                        </tr>
+                        </thead>
+                        <tbody id="adminProductsBody">
+                        <!-- Products will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Admin Orders Tab -->
+            <div id="adminOrdersTab" class="admin-tab-content">
+                <div class="admin-header">
+                    <h2>Danh sách đơn hàng</h2>
+                    <div class="order-filter">
+                        <select id="adminOrderFilter" onchange="filterAdminOrders()">
+                            <option value="ALL">Tất cả</option>
+                            <option value="PENDING">Chờ xử lý</option>
+                            <option value="PROCESSING">Đang xử lý</option>
+                            <option value="SHIPPING">Đang giao</option>
+                            <option value="DELIVERED">Đã giao</option>
+                            <option value="CANCELLED">Đã hủy</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="admin-table-container">
+                    <table class="admin-table" id="adminOrdersTable">
+                        <thead>
+                        <tr>
+                            <th>Mã ĐH</th>
+                            <th>Khách hàng</th>
+                            <th>Ngày đặt</th>
+                            <th>Tổng tiền</th>
+                            <th>Thanh toán</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                        </thead>
+                        <tbody id="adminOrdersBody">
+                        <!-- Orders will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Admin Stats Tab -->
+            <div id="adminStatsTab" class="admin-tab-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #FF3D00;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalOrders">0</h3>
+                            <p>Tổng đơn hàng</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #00C853;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalRevenue">0₫</h3>
+                            <p>Doanh thu</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #2196F3;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalCustomers">0</h3>
+                            <p>Khách hàng</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #FFD600;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="totalProducts">0</h3>
+                            <p>Sản phẩm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Product Modal -->
+<div class="modal" id="productModal">
+    <div class="modal-content modal-large">
+        <button class="modal-close" onclick="closeModal('productModal')">×</button>
+        <div class="product-detail" id="productDetail">
+            <!-- Product detail will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('checkoutModal')">×</button>
+        <h2 class="modal-title">THANH TOÁN</h2>
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label>Địa chỉ giao hàng *</label>
+                <textarea id="deliveryAddress" required rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại *</label>
+                <input type="tel" id="deliveryPhone" required>
+            </div>
+            <div class="form-group">
+                <label>Phương thức thanh toán *</label>
+                <select id="paymentMethod" required>
+                    <option value="COD">Thanh toán khi nhận hàng (COD)</option>
+                    <option value="QR_CODE">Chuyển khoản QR Code</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Ghi chú</label>
+                <textarea id="orderNotes" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">XÁC NHẬN ĐẶT HÀNG</button>
+        </form>
+    </div>
+</div>
+
+<!-- Auth Modal -->
+<div class="modal" id="authModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('authModal')">×</button>
+        <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login">ĐĂNG NHẬP</button>
+            <button class="auth-tab" data-tab="register">ĐĂNG KÝ</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form active">
+            <div class="form-group">
+                <label>Tên đăng nhập</label>
+                <input type="text" id="loginUsername" required>
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn-primary btn-full">ĐĂNG NHẬP</button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="auth-form">
+            <div class="form-group">
+                <label>Tên đăng nhập</label>
+                <input type="text" id="registerUsername" required>
+            </div>
+            <div class="form-group">
+                <label>Họ tên</label>
+                <input type="text" id="registerFullName" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="registerEmail" required>
+            </div>
+            <div class="form-group">
+                <label>Số điện thoại</label>
+                <input type="tel" id="registerPhone" required>
+            </div>
+            <div class="form-group">
+                <label>Địa chỉ</label>
+                <textarea id="registerAddress" required rows="2"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" id="registerPassword" required>
+            </div>
+            <button type="submit" class="btn-primary btn-full">ĐĂNG KÝ</button>
+        </form>
+    </div>
+</div>
+
+<!-- User Menu -->
+<div class="dropdown-menu" id="userMenu">
+    <div class="user-info" id="userInfo"></div>
+    <div class="menu-divider"></div>
+    <button class="menu-item" onclick="navigateTo('orders')">Đơn hàng của tôi</button>
+    <button class="menu-item" onclick="navigateTo('chat')">Chat hỗ trợ</button>
+    <button class="menu-item admin-only" onclick="navigateTo('admin')" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;display:inline;margin-right:8px">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        Quản trị Admin
+    </button>
+    <button class="menu-item" id="logoutBtn">Đăng xuất</button>
+</div>
+
+<!-- Add/Edit Product Modal -->
+<div class="modal" id="productFormModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('productFormModal')">×</button>
+        <h2 class="modal-title" id="productFormTitle">THÊM SẢN PHẨM MỚI</h2>
+        <form id="productForm">
+            <input type="hidden" id="productFormId">
+            <div class="form-group">
+                <label>Tên sản phẩm *</label>
+                <input type="text" id="productFormName" required>
+            </div>
+            <div class="form-group">
+                <label>Mô tả</label>
+                <textarea id="productFormDescription" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Giá *</label>
+                    <input type="number" id="productFormPrice" required min="0">
+                </div>
+                <div class="form-group">
+                    <label>Danh mục *</label>
+                    <select id="productFormCategory" required>
+                        <option value="NAM">NAM</option>
+                        <option value="NỮ">NỮ</option>
+                        <option value="UNISEX">UNISEX</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Size *</label>
+                    <input type="text" id="productFormSize" required placeholder="VD: 39, 40, 41">
+                </div>
+                <div class="form-group">
+                    <label>Tồn kho *</label>
+                    <input type="number" id="productFormStock" required min="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>URL hình ảnh</label>
+                <input type="text" id="productFormImageUrl" placeholder="/assets/shoes/product.jpg">
+            </div>
+            <button type="submit" class="btn-primary btn-full">LƯU SẢN PHẨM</button>
+        </form>
+    </div>
+</div>
+
+<!-- Update Order Status Modal -->
+<div class="modal" id="orderStatusModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('orderStatusModal')">×</button>
+        <h2 class="modal-title">CẬP NHẬT TRẠNG THÁI ĐƠN HÀNG</h2>
+        <form id="orderStatusForm">
+            <input type="hidden" id="orderStatusId">
+            <div class="form-group">
+                <label>Mã đơn hàng</label>
+                <input type="text" id="orderStatusCode" readonly>
+            </div>
+            <div class="form-group">
+                <label>Trạng thái mới *</label>
+                <select id="orderStatusValue" required>
+                    <option value="PENDING">Chờ xử lý</option>
+                    <option value="PROCESSING">Đang xử lý</option>
+                    <option value="SHIPPING">Đang giao hàng</option>
+                    <option value="DELIVERED">Đã giao hàng</option>
+                    <option value="CANCELLED">Đã hủy</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-primary btn-full">CẬP NHẬT</button>
+        </form>
+    </div>
+</div>
+
+<script src="js/config.js"></script>
+</body>
+</html>
